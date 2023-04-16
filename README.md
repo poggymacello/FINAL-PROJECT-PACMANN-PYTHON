@@ -39,32 +39,32 @@ display_items(): method untuk menampilkan daftar item yang ada di dalam cart.
 Berikut adalah dua contoh test case beserta outputnya:
 
   a. TEST CASE 1
-# Membuat objek transaksi baru
+## Membuat objek transaksi baru
 transaction = Transaction()
 
-# Menambahkan beberapa item ke dalam transaksi
+## Menambahkan beberapa item ke dalam transaksi
 transaction.add_item("Barang A", 2, 10000)
 transaction.add_item("Barang B", 3, 5000)
 
-# Memperbarui jumlah barang untuk "Barang A"
+## Memperbarui jumlah barang untuk "Barang A"
 transaction.update_item_qty("Barang A", 3)
 
-# Memperbarui harga barang untuk "Barang B"
+## Memperbarui harga barang untuk "Barang B"
 transaction.update_item_price("Barang B", 6000)
 
-# Menghapus "Barang B" dari transaksi
+## Menghapus "Barang B" dari transaksi
 transaction.delete_item("Barang B")
 
-# Mengecek transaksi
+## Mengecek transaksi
 transaction.check_order()
 
-# Mencetak transaksi
+## Mencetak transaksi
 transaction.print_transaction()
 
-# Menghitung total harga dan memberikan diskon jika berlaku
+## Menghitung total harga dan memberikan diskon jika berlaku
 total = transaction.total_price()
 
-# Menghasilkan struk belanja
+## Menghasilkan struk belanja
 generate_receipt(transaction.items, 10)
 
 OUTPUT
@@ -75,71 +75,44 @@ Barang A        3               10000           30000
 Receipt generated successfully: receipt-2023-04-16 12-39-22.txt
 
  b. TEST CASE 2
- # Membuat objek transaksi baru
-transaction = Transaction()
-
-# Menambahkan beberapa item ke dalam transaksi
-transaction.add_item("Barang A", 2, 10000)
-transaction.add_item("Barang B", "tiga", "lima ribu")
-
-# Memperbarui jumlah barang untuk "Barang A"
-transaction.update_item_qty("Barang A", 3)
-
-# Memperbarui harga barang untuk "Barang B"
-transaction.update_item_price("Barang B", "enam ribu")
-
-# Menghapus "Barang C" dari transaksi
-transaction.delete_item("Barang C")
-
-# Mengecek transaksi
-transaction.check_order()
-
-# Mencetak transaksi
-transaction.print_transaction()
-
-# Menghitung total harga dan memberikan diskon jika berlaku
-total = transaction.total_price()
-
-# Menghasilkan struk belanja
-generate_receipt(transaction.items, 10)
-# create new transaction
+## Membuat objek transaksi baru
 t = Transaction()
 
-# add items to transaction
+## Menambahkan beberapa item ke dalam transaksi
 t.add_item("Baju", 2, 100000)
 t.add_item("Celana", 1, 150000)
 t.add_item("Sepatu", 1, 300000)
 
-# print transaction
+## Mencetak transaksi
 print("Transaksi awal:")
 t.print_transaction()
 
-# update item name
+## Mengupdate nama item
 t.update_item_name("Baju", "Kemeja")
 
-# update item qty
+## Mengupdate jumlah item
 t.update_item_qty("Celana", 2)
 
-# update item price
+## Mengupdate harga item
 t.update_item_price("Sepatu", 280000)
 
-# delete item
+## Menghapus Item
 t.delete_item("Baju")
 
-# print transaction
+## Mencetak Transaksi Baru
 print("\nTransaksi setelah perubahan:")
 t.print_transaction()
 
-# check order
+## Memeriksa Pesanan
 t.check_order()
 
-# calculate total price with discount
+## Menghitung total harga dan memberikan diskon jika berlaku
 total = t.total_price()
 
-# print total price
+## Mencetak total harga
 print(f"\nTotal harga: {total}")
 
-# generate receipt
+## Menghasilkan struk belanja
 generate_receipt(t.items, 10)
 
 OUTPUT :
