@@ -3,18 +3,18 @@ SELF-SERVICE SUPERMARKET CASHIER
 
 DOKUMENTASI :
 
-1. # LATAR BELAKANG
+1. LATAR BELAKANG
 
 Andi memiliki supermarket yang ingin membuat sistem kasir self-service agar pelanggan dapat memasukkan barang yang ingin dibeli dengan sendiri, tanpa harus dilakukan oleh kasir. Sistem ini harus dapat menghitung harga dan menampilkan total harga yang harus dibayar oleh pelanggan. Tujuan dari pembuatan sistem ini adalah untuk meningkatkan efisiensi proses bisnis dan memberikan kemudahan bagi pelanggan dalam berbelanja.
 
-2. # PENJELASAN REQUIREMENTS OBJECTIVES
+2. PENJELASAN REQUIREMENTS OBJECTIVES
 Untuk membuat program sistem kasir self-service, beberapa requirements atau tujuan yang perlu dipenuhi antara lain:
  a. Pelanggan dapat memasukkan item yang ingin dibeli, jumlah item, dan harga item.
  b. Sistem dapat menghitung total harga yang harus dibayar oleh pelanggan.
  c. Sistem dapat menampilkan total harga yang harus dibayar.
  d. Program harus bersifat modular, menggunakan clean code (PEP8), dan memiliki exception handling untuk mengatasi kesalahan.
 
-3. #PENJELASAN ALUR CODE/FLOWCHART
+3. PENJELASAN ALUR CODE/FLOWCHART
 
 Berikut adalah alur code atau flowchart dari program sistem kasir self-service:
  a. Program akan meminta input dari pengguna mengenai item yang akan dibeli. Input yang diminta meliputi nama item, harga, dan jumlah item yang akan dibeli. Input tersebut akan diproses menggunakan method add_item dari class Transaction, yang akan menambahkan item dan jumlahnya ke dalam cart.
@@ -24,7 +24,7 @@ Berikut adalah alur code atau flowchart dari program sistem kasir self-service:
  e. Setelah pengguna memasukkan persentase diskon (atau tidak memasukkan apa-apa), program akan menampilkan total harga setelah diskon dan meminta pengguna untuk membayar. 
  f. Akhirnya, program akan mencetak receipt dengan memanggil method generate_receipt dari class Transaction, yang akan menampilkan detail pembelian dan harga di sebuah file teks.
 
-4. #PENJELASAN ATTRIBUTES & FUNCTION 
+4. PENJELASAN ATTRIBUTES & FUNCTION 
 
 Pada kode yang diberikan, terdapat class Transaction yang memiliki beberapa function atau method dan attribute. Berikut adalah penjelasan dari function/attribute tersebut:
 
@@ -38,7 +38,7 @@ total_price(): method untuk menghitung total harga dari semua item yang dibeli o
 generate_receipt(): method untuk meng-generate receipt berisi detail belanjaan customer.
 display_items(): method untuk menampilkan daftar item yang ada di dalam cart.
 
-5. #DEMONSTRASI TEST CASE DAN OUTPUT
+5. DEMONSTRASI TEST CASE DAN OUTPUT
 Berikut adalah dua contoh test case beserta outputnya:
 
   a. TEST CASE 1
@@ -113,9 +113,11 @@ t.check_order()
 total = t.total_price()
 
 - Mencetak total harga
+- 
 print(f"\nTotal harga: {total}")
 
 - Menghasilkan struk belanja
+- 
 generate_receipt(t.items, 10)
 
 OUTPUT :
