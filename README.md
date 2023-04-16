@@ -3,17 +3,19 @@ SELF-SERVICE SUPERMARKET CASHIER
 
 DOKUMENTASI :
 
-1. LATAR BELAKANG
+1. # LATAR BELAKANG
+
 Andi memiliki supermarket yang ingin membuat sistem kasir self-service agar pelanggan dapat memasukkan barang yang ingin dibeli dengan sendiri, tanpa harus dilakukan oleh kasir. Sistem ini harus dapat menghitung harga dan menampilkan total harga yang harus dibayar oleh pelanggan. Tujuan dari pembuatan sistem ini adalah untuk meningkatkan efisiensi proses bisnis dan memberikan kemudahan bagi pelanggan dalam berbelanja.
 
-2. PENJELASAN REQUIREMENTS OBJECTIVES
+2. # PENJELASAN REQUIREMENTS OBJECTIVES
 Untuk membuat program sistem kasir self-service, beberapa requirements atau tujuan yang perlu dipenuhi antara lain:
  a. Pelanggan dapat memasukkan item yang ingin dibeli, jumlah item, dan harga item.
  b. Sistem dapat menghitung total harga yang harus dibayar oleh pelanggan.
  c. Sistem dapat menampilkan total harga yang harus dibayar.
  d. Program harus bersifat modular, menggunakan clean code (PEP8), dan memiliki exception handling untuk mengatasi kesalahan.
 
-3. PENJELASAN ALUR CODE/FLOWCHART
+3. #PENJELASAN ALUR CODE/FLOWCHART
+
 Berikut adalah alur code atau flowchart dari program sistem kasir self-service:
  a. Program akan meminta input dari pengguna mengenai item yang akan dibeli. Input yang diminta meliputi nama item, harga, dan jumlah item yang akan dibeli. Input tersebut akan diproses menggunakan method add_item dari class Transaction, yang akan menambahkan item dan jumlahnya ke dalam cart.
  b. Setiap kali pengguna menambahkan item baru ke dalam cart, program akan menampilkan kembali daftar item yang ada di cart, total harga, serta pilihan untuk melanjutkan membeli atau untuk checkout.
@@ -22,7 +24,8 @@ Berikut adalah alur code atau flowchart dari program sistem kasir self-service:
  e. Setelah pengguna memasukkan persentase diskon (atau tidak memasukkan apa-apa), program akan menampilkan total harga setelah diskon dan meminta pengguna untuk membayar. 
  f. Akhirnya, program akan mencetak receipt dengan memanggil method generate_receipt dari class Transaction, yang akan menampilkan detail pembelian dan harga di sebuah file teks.
 
-4. PENJELASAN ATTRIBUTES & FUNCTION 
+4. #PENJELASAN ATTRIBUTES & FUNCTION 
+
 Pada kode yang diberikan, terdapat class Transaction yang memiliki beberapa function atau method dan attribute. Berikut adalah penjelasan dari function/attribute tersebut:
 
 Attribute:
@@ -35,36 +38,36 @@ total_price(): method untuk menghitung total harga dari semua item yang dibeli o
 generate_receipt(): method untuk meng-generate receipt berisi detail belanjaan customer.
 display_items(): method untuk menampilkan daftar item yang ada di dalam cart.
 
-5. DEMONSTRASI TEST CASE DAN OUTPUT
+5. #DEMONSTRASI TEST CASE DAN OUTPUT
 Berikut adalah dua contoh test case beserta outputnya:
 
   a. TEST CASE 1
-## Membuat objek transaksi baru
+- Membuat objek transaksi baru
 transaction = Transaction()
 
-## Menambahkan beberapa item ke dalam transaksi
+- Menambahkan beberapa item ke dalam transaksi
 transaction.add_item("Barang A", 2, 10000)
 transaction.add_item("Barang B", 3, 5000)
 
-## Memperbarui jumlah barang untuk "Barang A"
+- Memperbarui jumlah barang untuk "Barang A"
 transaction.update_item_qty("Barang A", 3)
 
-## Memperbarui harga barang untuk "Barang B"
+- Memperbarui harga barang untuk "Barang B"
 transaction.update_item_price("Barang B", 6000)
 
-## Menghapus "Barang B" dari transaksi
+- Menghapus "Barang B" dari transaksi
 transaction.delete_item("Barang B")
 
-## Mengecek transaksi
+- Mengecek transaksi
 transaction.check_order()
 
-## Mencetak transaksi
+- Mencetak transaksi
 transaction.print_transaction()
 
-## Menghitung total harga dan memberikan diskon jika berlaku
+- Menghitung total harga dan memberikan diskon jika berlaku
 total = transaction.total_price()
 
-## Menghasilkan struk belanja
+- Menghasilkan struk belanja
 generate_receipt(transaction.items, 10)
 
 OUTPUT
@@ -75,44 +78,44 @@ Barang A        3               10000           30000
 Receipt generated successfully: receipt-2023-04-16 12-39-22.txt
 
  b. TEST CASE 2
-## Membuat objek transaksi baru
+- Membuat objek transaksi baru
 t = Transaction()
 
-## Menambahkan beberapa item ke dalam transaksi
+- Menambahkan beberapa item ke dalam transaksi
 t.add_item("Baju", 2, 100000)
 t.add_item("Celana", 1, 150000)
 t.add_item("Sepatu", 1, 300000)
 
-## Mencetak transaksi
+- Mencetak transaksi
 print("Transaksi awal:")
 t.print_transaction()
 
-## Mengupdate nama item
+- Mengupdate nama item
 t.update_item_name("Baju", "Kemeja")
 
-## Mengupdate jumlah item
+- Mengupdate jumlah item
 t.update_item_qty("Celana", 2)
 
-## Mengupdate harga item
+- Mengupdate harga item
 t.update_item_price("Sepatu", 280000)
 
-## Menghapus Item
+- Menghapus Item
 t.delete_item("Baju")
 
-## Mencetak Transaksi Baru
+- Mencetak Transaksi Baru
 print("\nTransaksi setelah perubahan:")
 t.print_transaction()
 
-## Memeriksa Pesanan
+- Memeriksa Pesanan
 t.check_order()
 
-## Menghitung total harga dan memberikan diskon jika berlaku
+- Menghitung total harga dan memberikan diskon jika berlaku
 total = t.total_price()
 
-## Mencetak total harga
+- Mencetak total harga
 print(f"\nTotal harga: {total}")
 
-## Menghasilkan struk belanja
+- Menghasilkan struk belanja
 generate_receipt(t.items, 10)
 
 OUTPUT :
